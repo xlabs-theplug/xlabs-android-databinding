@@ -45,16 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adapters\BindableListAdapter.cs" />
+    <Compile Include="BindingApplicator.cs" />
+    <Compile Include="BindingExpression.cs" />
+    <Compile Include="BindingMode.cs" />
+    <Compile Include="IValueConverter.cs" />
+    <Compile Include="PropertyBinding.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities\DelegateUtility.cs" />
     <Compile Include="Utilities\TypeUtility.cs" />
+    <Compile Include="ValueConverters\ListAdapterConverter.cs" />
+    <Compile Include="ViewBinding\IViewBinder.cs" />
+    <Compile Include="ViewBinding\ViewBinderRegistry.cs" />
+    <Compile Include="ViewBinding\ViewEventBinder.cs" />
+    <Compile Include="ViewBinding\ViewValueChangedHandler.cs" />
+    <Compile Include="XmlBindingApplicator.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="27.0.2.1" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Resources\values\" />
+    <AndroidResource Include="Resources\values\attr.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
